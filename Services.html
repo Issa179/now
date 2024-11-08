@@ -18,22 +18,12 @@
             color: #333;
             padding-top: 80px; /* Space for fixed nav */
             padding-bottom: 20px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             line-height: 1.6;
         }
 
+        /* Header and Navigation */
         header {
-            background-color: rgba(0, 0, 0, 0.6); 
+            background: rgba(0, 0, 0, 0.6); 
             color: white;
             padding: 10px 20px;
             display: flex;
@@ -51,15 +41,16 @@
             margin-right: 10px;
         }
 
+        header h1 {
+            font-size: 1.2rem;
+            margin-right: auto;
+        }
+
         header nav ul {
             list-style: none;
             display: flex;
             gap: 15px;
-            padding: 10px 14px;
-        }
-
-        header nav ul li {
-            display: inline;
+            background: black;
         }
 
         header nav a {
@@ -73,6 +64,7 @@
             background-color: yellowgreen;
         }
 
+        /* Container */
         .container {
             max-width: 600px;
             width: 90%;
@@ -83,78 +75,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        label, p {
-            font-weight: bold;
-            margin: 10px 0 5px;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        a.button:hover {
-            background-color: #45a049;
-        }
-
-        .social-media {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .social-media a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .social-media a:hover {
-            color: yellowgreen;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
+        /* Responsive Layout */
         @media (max-width: 768px) {
             header nav ul {
                 flex-direction: column;
                 gap: 10px;
-                padding: 5px 10px;
-            }
-
-            header img {
-                width: 40px;
-                height: 40px;
             }
 
             .container {
-                width: 90%;
                 padding: 15px;
                 margin-top: 80px;
             }
 
-            .social-media {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            footer {
-                font-size: 0.8rem;
-                padding: 15px;
+            .service-option {
+                width: 45%;
             }
         }
 
@@ -172,150 +106,17 @@
                 margin-top: 70px;
             }
 
-            a.button {
-                padding: 8px 12px;
-                font-size: 0.9rem;
-            }
-        }
-        header {
-            background: rgba(0, 0, 0, 0.6); 
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            z-index: 1000px;
-            top:0px;
-            width: 100%;
-        }
-
-        header img {
-            width: 60px;
-            height: 60px;
-            margin-right: 10px;
-        }
-
-        header h1 {
-            font-size: 17px;
-            margin-right: auto;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            background:white;
-            padding: 12px 14px;
-
-        }
-
-        header nav ul li {
-            display: inline;
-        }
-
-        header nav a {
-            color: #f9f9f9;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-    
-        }
-
-        header nav a:hover {
-            text-decoration: none;
-            background-color: yellowgreen
-        }
-
-        .about-main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        .about-main h2 {
-            color: #4CAF50;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            margin-top: 0px;
-        }
-
-        .about-main p {
-            font-size: 1rem;
-            color: #555;
-            margin: 20px 0;
-            margin-top: 0px;
-        }
-
-        /* Navigation Bar Styling */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            z-index: 1000;
-        }
-
-        .navbar .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Mobile Menu */
-        @media (max-width: 768px) {
-            .navbar .nav-links {
-                display: none;
-                flex-direction: column;
+            .service-option {
                 width: 100%;
-                background-color: #333;
-                position: absolute;
-                top: 50px;
-                left: 0;
             }
 
-            .navbar .nav-links a {
-                padding: 10px 20px;
-                text-align: left;
-            }
-
-            .navbar .menu-toggle {
-                display: block;
-            }
-
-            .navbar .nav-links.active {
-                display: flex;
+            .social-media {
+                flex-direction: column;
+                gap: 10px;
             }
         }
 
-        /* Button Styling */
+        /* Button and Details */
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -325,13 +126,6 @@
             border-radius: 4px;
             text-decoration: none;
             font-size: 16px;
-        }
-
-        /* Page Header */
-        h2 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-            text-align: center;
         }
 
         /* Dropdown */
@@ -364,27 +158,9 @@
             transition: border-color 0.3s;
         }
 
-        .service-option.selected {
-            border-color: #4CAF50;
-            background-color: #f0fff0;
-        }
-
         .service-option img {
             width: 100%;
             border-radius: 8px;
-        }
-
-        .service-option div {
-            font-size: 18px;
-            color: #333;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .service-option p {
-            font-size: 14px;
-            color: #555;
-            margin-top: 10px;
         }
 
         /* Service Details */
@@ -394,67 +170,16 @@
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
             max-width: 600px;
             margin: 30px auto;
         }
 
-        .service-details img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .service-details h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        .service-details p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .service-option {
-                width: 45%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .service-option {
-                width: 100%;
-            }
-        }
-        
-        header img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            padding: 10px 14px;
-            background: black;
-        }
-
-        header nav ul li {
-            display: inline;
-        }
-
-        header nav a {
-            color:white;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        header nav a:hover {
-            background-color: yellowgreen;
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -472,15 +197,11 @@
                 <li><a href="contactIss.html">Contact Us</a></li>
             </ul>
         </nav>
+    </header>
 
-    </nav>
-</header>
-
-    <!-- Page Title and Description -->
     <h2>Choose a Service</h2>
     <p style="text-align: center;">Select one of our top services to enhance your stay at West Lake Kivu Hotel.</p>
 
-    <!-- Dropdown Menu -->
     <select id="serviceDropdown">
         <option value="">Select a service...</option>
         <option value="tour_booking">Tour Booking</option>
@@ -488,7 +209,6 @@
         <option value="bar">Bar</option>
     </select>
 
-    <!-- Service Options -->
     <div class="service-options">
         <label class="service-option" id="tourOption">
             <input type="radio" name="service" value="tour_booking">
@@ -510,54 +230,15 @@
         </label>
     </div>
 
-    <!-- Service Details -->
     <div class="service-details" id="serviceDetails">
         <img src="44.jpeg" alt="Service Image" id="serviceImage">
         <h3 id="serviceTitle">Service Title</h3>
         <p id="serviceDescription">Service description will appear here.</p>
     </div>
+
     <footer>
         <p>&copy; 2024 West Lake Kivu Hotel. All rights reserved.</p>
         <p>Contact us: info@westlakekivuhotel.com | Phone: 0780541910</p>
     </footer>
-    <script>
-        /* Toggle Menu for Mobile */
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-
-        const serviceInfo = {
-            tour_booking: {
-                title: "Tour Booking",
-                image: "image/marten-bjork-n_IKQDCyrG0-unsplash.jpg",
-                description: "Enjoy guided tours around Lake Kivu, including boat tours, cultural visits, and nature hikes."
-            },
-            restaurant: {
-                title: "Restaurant",
-                image: "image/restaurant-hall.jpg",
-                description: "Dine with a view! Our restaurant offers gourmet meals featuring both local and international cuisine."
-            },
-            bar: {
-                title: "Lakeside Bar",
-                image: "image/hotel.jpg",
-                description: "Relax at our lakeside bar with cocktails, fine wines, and stunning sunset views."
-            }
-        };
-
-        function updateServiceDetails(serviceKey) {
-            const details = serviceInfo[serviceKey];
-            if (details) {
-                document.getElementById('serviceTitle').textContent = details.title;
-                document.getElementById('serviceImage').src = details.image;
-                document.getElementById('serviceDescription').textContent = details.description;
-                document.getElementById('serviceDetails').style.display = "block";
-            } else {
-                document.getElementById('serviceDetails').style.display = "none";
-            }
-        }
-
-        function updateSelection(selectedService) {
-            document.querySelectorAll('.service-option').forEach((label) => {
-                label.classList.remove('selected');
-                if (label.querySelector('input').value
-            }
+</body>
+</html>
